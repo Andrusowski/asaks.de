@@ -1,0 +1,12 @@
+{{ define "main" }}
+<div class="flex items-center justify-center min-h-screen">
+    <div class="p-8 bg-white rounded-lg shadow-lg max-w-2xl w-full">
+        <h1 class="text-4xl font-bold text-indigo-600 mb-4">
+            {{ .Title }}
+        </h1>
+        <div class="prose max-w-none text-gray-800">
+            {{ .Content }}
+        </div>
+    </div>
+</div>
+{{ end }}
