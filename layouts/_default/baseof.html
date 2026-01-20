@@ -10,7 +10,32 @@
     {{ $style := resources.Get "css/main.css" | css.PostCSS }}
     <link rel="stylesheet" href="{{ $style.Permalink }}">
 </head>
-<body class="bg-gray-100 min-h-screen">
-    {{ block "main" . }}{{ end }}
+<body class="bg-retro-bg text-retro-text min-h-screen flex flex-col font-sans antialiased selection:bg-retro-accent selection:text-white">
+    
+    <!-- Navigation -->
+    <header class="p-6">
+        <nav>
+            <ul class="flex space-x-6 text-xl uppercase tracking-widest">
+                <li>
+                    <a href="/" class="hover:text-retro-accent transition-colors duration-200">[ Home ]</a>
+                </li>
+                <li>
+                    <a href="/about" class="hover:text-retro-accent transition-colors duration-200">[ About ]</a>
+                </li>
+                <li>
+                    <a href="/portfolio" class="hover:text-retro-accent transition-colors duration-200">[ Portfolio ]</a>
+                </li>
+                <li>
+                    <a href="/tools" class="hover:text-retro-accent transition-colors duration-200">[ Tools ]</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center p-4">
+        {{ block "main" . }}{{ end }}
+    </main>
+
 </body>
 </html>

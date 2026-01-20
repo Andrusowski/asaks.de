@@ -1,0 +1,9 @@
+<a href="{{ .url | default "#" }}" 
+   class="w-12 h-12 p-2 flex items-center justify-center border-2 border-retro-text text-retro-text hover:bg-retro-accent hover:border-retro-accent hover:text-white transition-all duration-300 shadow-[4px_4px_0px_0px_rgba(252,247,248,1)] transform hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none [&>svg]:w-8 [&>svg]:h-8 [&>svg]:fill-current [&_path]:fill-current" 
+   title="{{ .title }}"
+   target="_blank" 
+   rel="noopener noreferrer">
+    {{ with resources.Get (printf "images/icons/%s" .icon) }}
+        {{ .Content | safeHTML }}
+    {{ end }}
+</a>

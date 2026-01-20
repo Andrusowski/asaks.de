@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to My Hugo Site on My New Hugo Site</title>
+    <title>Hello, I&#39;m asaks on My New Hugo Site</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Welcome to My Hugo Site on My New Hugo Site</description>
+    <description>Recent content in Hello, I&#39;m asaks on My New Hugo Site</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate></lastBuildDate>
+    <lastBuildDate>Mon, 19 Jan 2026 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 19 Jan 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;h2 id=&#34;hello-there&#34;&gt;Hello there!&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m a software engineer with a passion for &lt;strong&gt;retro aesthetics&lt;/strong&gt; and &lt;strong&gt;modern technology&lt;/strong&gt;. I spend my time exploring the intersection of low-level systems and high-level design.&lt;/p&gt;&#xA;&lt;p&gt;When I&amp;rsquo;m not coding, you can find me diving into old hardware, playing pixel-art games, or dreaming about the early days of the internet. This site is my personal playground where I experiment with new ideas and showcase my journey.&lt;/p&gt;&#xA;&lt;h3 id=&#34;skills--interests&#34;&gt;Skills &amp;amp; Interests&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Languages:&lt;/strong&gt; Go, Rust, TypeScript, Python&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tools:&lt;/strong&gt; Hugo, Tailwind CSS, Docker, Neovim&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Vibe:&lt;/strong&gt; Synthwave, Pixel Art, 90s Web&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Thanks for stopping by!&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Portfolio</title>
+      <link>http://localhost:1313/portfolio/</link>
+      <pubDate>Mon, 19 Jan 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/portfolio/</guid>
+      <description>&lt;p&gt;These are some of the projects I&amp;rsquo;ve worked on, ranging from large-scale professional applications to personal experiments in code.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Tools</title>
+      <link>http://localhost:1313/tools/</link>
+      <pubDate>Mon, 19 Jan 2026 12:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tools/</guid>
+      <description>&lt;p&gt;Hey ho!&lt;/p&gt;</description>
+    </item>
   </channel>
 </rss>

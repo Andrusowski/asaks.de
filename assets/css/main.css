@@ -2,4 +2,28 @@
 
 @theme {
   --font-sans: "Jersey 10", sans-serif;
+
+  --color-retro-bg: #262730;
+  --color-retro-text: #FCF7F8;
+  --color-retro-accent: #D33F49;
+}
+
+@layer components {
+  .retro-content {
+    @apply text-2xl leading-relaxed text-gray-300;
+  }
+  .retro-content h1, 
+  .retro-content h2, 
+  .retro-content h3 {
+    @apply font-normal uppercase text-retro-text mt-8 mb-4;
+  }
+  .retro-content h1 { @apply text-4xl; }
+  .retro-content h2 { @apply text-3xl border-b border-gray-600 pb-2; }
+  .retro-content h3 { @apply text-2xl; }
+  .retro-content p { @apply mb-6; }
+  .retro-content a { @apply text-retro-accent no-underline hover:underline; }
+  .retro-content ul { @apply list-disc list-inside mb-6 space-y-2; }
+  .retro-content li::marker { @apply text-retro-accent; }
+  .retro-content strong { @apply text-white font-bold; }
+  .retro-content code { @apply text-retro-accent bg-gray-800 px-2 py-0.5 text-lg font-mono; }
 }

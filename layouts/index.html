@@ -1,12 +1,78 @@
 {{ define "main" }}
-<div class="flex items-center justify-center min-h-screen">
-    <div class="p-8 bg-white rounded-lg shadow-lg max-w-2xl w-full">
-        <h1 class="text-4xl font-bold text-indigo-600 mb-4">
-            {{ .Title }}
-        </h1>
-        <div class="prose max-w-none text-gray-800">
-            {{ .Content }}
+<div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+    
+    <!-- Left Column: Today's Vibe -->
+    <div class="border-4 border-retro-text p-1 shadow-[8px_8px_0px_0px_rgba(211,63,73,1)] bg-retro-bg">
+        <div class="border-2 border-retro-text p-6 flex flex-col items-center justify-center min-h-[400px]">
+            <h2 class="text-3xl uppercase mb-6 border-b-2 border-retro-accent pb-2">Today's Vibe</h2>
+            
+            <div id="pool-gif-container" class="w-full aspect-square flex items-center justify-center border-2 border-dashed border-gray-600 relative overflow-hidden group">
+                <div class="absolute inset-0 bg-blue-900/10 animate-pulse"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Right Column: Icons & Intro -->
+    <div class="flex flex-col space-y-8 h-full justify-center">
+        <!-- Social Icons -->
+        <div class="flex justify-start space-x-6">
+            {{ partial "social-icon.html" (dict "url" "https://github.com/Andrusowski" "title" "GitHub" "icon" "github-brands-solid-full.svg") }}
+            {{ partial "social-icon.html" (dict "url" "https://de.linkedin.com/in/asaks" "title" "LinkedIn" "icon" "linkedin-in-brands-solid-full.svg") }}
+            {{ partial "social-icon.html" (dict "url" "https://www.instagram.com/andidreasreas/?hl=en" "title" "Instagram" "icon" "instagram-brands-solid-full.svg") }}
+            {{ partial "social-icon.html" (dict "url" "https://bandcamp.com/andrusowski" "title" "Bandcamp" "icon" "bandcamp-brands-solid-full.svg") }}
+            {{ partial "social-icon.html" (dict "url" "https://steamcommunity.com/id/schinkenplusbrot/" "title" "Steam" "icon" "steam-brands-solid-full.svg") }}
+        </div>
+
+        <!-- Intro Text Area -->
+        <div class="border-l-4 border-retro-accent pl-6 py-2">
+            <h1 class="text-5xl font-bold mb-4 leading-none">{{ .Title }}</h1>
+            <div class="text-2xl leading-relaxed text-gray-300">
+                {{ .Content }}
+                <p class="mt-4 text-retro-accent blink-cursor">_</p>
+            </div>
         </div>
     </div>
 </div>
+
+{{ $vibeGifs := resources.Match "images/vibe/*.gif" }}
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const gifUrls = [
+            {{ range $vibeGifs }}
+                "{{ .RelPermalink }}",
+            {{ end }}
+        ];
+
+        const gifContainer = document.getElementById('pool-gif-container');
+        
+        if (gifContainer && gifUrls.length > 0) {
+            // Seed based on user's current local date (YYYYMMDD)
+            const now = new Date();
+            const seed = now.getFullYear() * 10000 + (now.getMonth() + 1) * 100 + now.getDate();
+            
+            // Deterministic selection based on date
+            const index = seed % gifUrls.length;
+            const selectedGif = gifUrls[index];
+            
+            const img = document.createElement('img');
+            img.src = selectedGif;
+            img.alt = "Today's Vibe";
+            img.className = "w-full h-full object-contain grayscale hover:grayscale-0 transition-all duration-500";
+            
+            gifContainer.innerHTML = '';
+            gifContainer.appendChild(img);
+        }
+    });
+</script>
+
+<style>
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+    .blink-cursor {
+        animation: blink 1s step-end infinite;
+        display: inline-block;
+    }
+</style>
 {{ end }}

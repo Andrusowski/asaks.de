@@ -1,9 +1,7 @@
 ---
-title: "Welcome to My Hugo Site"
-date: 2023-10-27T12:00:00Z
+title: "Hello, I'm asaks"
+date: 2026-01-19T12:00:00Z
 draft: false
 ---
 
-This is a fresh **Hugo** project styled with **Tailwind CSS**.
-
-It uses a custom layout structure without relying on external themes.
+I'm a developer who loves building things that are as aesthetic as they are functional. Welcome to my little corner of the web. Explore my projects or learn more about me using the links above.
