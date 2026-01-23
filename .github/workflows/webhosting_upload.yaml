@@ -1,0 +1,54 @@
+# Workflow for building and deploying a Hugo site to an FTP Site
+name: Deploy Hugo site to the Webhost
+
+on:
+  # Runs on pushes targeting the default branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Allow one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: true
+
+# Default to bash
+defaults:
+  run:
+    shell: bash
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.101.0
+    steps:
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          submodules: recursive
+      - name: Build with Hugo
+        env:
+          # For maximum backward compatibility with Hugo modules
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
+        run: |
+          hugo \
+            --minify #\
+            #--baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ${{ secrets.FTPS_SERVER }}
+          username: ${{ secrets.FTPS_USER }}
+          password: ${{ secrets.FTPS_PASSWORD }}
+          local-dir: ./public/
+          protocol: ftps
+          port: 21
