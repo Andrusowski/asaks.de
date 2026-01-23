@@ -57,5 +57,6 @@ jobs:
           username: ${{ secrets.FTPS_USER }}
           password: ${{ secrets.FTPS_PASSWORD }}
           local-dir: ./public/
+          server-dir: andrus.io/httpdocs/
           protocol: ftps
           port: 21
