@@ -20,5 +20,3 @@ hobby_projects:
     url: "https://mhugin.com/#/"
     description: "A location based mobile game focussing on real-life exploration and trading"
 ---
-
-These are some of the projects I've worked on, ranging from large-scale professional applications to personal experiments in code.

@@ -262,6 +262,9 @@
   .aspect-square {
     aspect-ratio: 1 / 1;
   }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-12 {
     height: calc(var(--spacing) * 12);
   }
@@ -280,11 +283,17 @@
   .min-h-screen {
     min-height: 100vh;
   }
+  .w-8 {
+    width: calc(var(--spacing) * 8);
+  }
   .w-12 {
     width: calc(var(--spacing) * 12);
   }
   .w-48 {
     width: calc(var(--spacing) * 48);
+  }
+  .w-100 {
+    width: calc(var(--spacing) * 100);
   }
   .w-full {
     width: 100%;
@@ -392,6 +401,9 @@
       background-color: color-mix(in oklab, var(--color-blue-900) 10%, transparent);
     }
   }
+  .bg-current {
+    background-color: currentcolor;
+  }
   .bg-retro-bg {
     background-color: var(--color-retro-bg);
   }
@@ -400,6 +412,10 @@
   }
   .\[background-size\:16px_16px\] {
     background-size: 16px 16px;
+  }
+  .mask-repeat {
+    -webkit-mask-repeat: repeat;
+            mask-repeat: repeat;
   }
   .object-contain {
     -o-object-fit: contain;
@@ -735,6 +751,11 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
   }
+  .lg\:grid-cols-2 {
+    @media (width >= 64rem) {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
   .\[\&_path\]\:fill-current {
     & path {
       fill: currentcolor;
@@ -804,7 +825,8 @@
   }
   .retro-content ul {
     margin-bottom: calc(var(--spacing) * 6);
-    list-style-position: inside;
+    margin-left: calc(var(--spacing) * 8);
+    list-style-position: outside;
     list-style-type: disc;
     :where(& > :not(:last-child)) {
       --tw-space-y-reverse: 0;

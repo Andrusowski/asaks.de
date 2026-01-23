@@ -1,8 +1,8 @@
 {{ define "main" }}
-<div class="w-full max-w-5xl grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+<div class="w-full max-w-4xl grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
     
     <!-- Left Column: Today's Vibe -->
-    <div class="border-4 border-retro-text p-1 shadow-[8px_8px_0px_0px_rgba(211,63,73,1)] bg-retro-bg">
+    <div class="w-100 border-4 border-retro-text p-1 shadow-[8px_8px_0px_0px_rgba(211,63,73,1)] bg-retro-bg">
         <div class="border-2 border-retro-text p-6 flex flex-col items-center justify-center min-h-[400px]">
             <h2 class="text-3xl uppercase mb-6 border-b-2 border-retro-accent pb-2">Today's Vibe</h2>
             
@@ -21,6 +21,7 @@
             {{ partial "social-icon.html" (dict "url" "https://www.instagram.com/andidreasreas/?hl=en" "title" "Instagram" "icon" "instagram-brands-solid-full.svg") }}
             {{ partial "social-icon.html" (dict "url" "https://bandcamp.com/andrusowski" "title" "Bandcamp" "icon" "bandcamp-brands-solid-full.svg") }}
             {{ partial "social-icon.html" (dict "url" "https://steamcommunity.com/id/schinkenplusbrot/" "title" "Steam" "icon" "steam-brands-solid-full.svg") }}
+            {{ partial "social-icon.html" (dict "url" "https://koito.andrus.io/" "title" "Koito" "icon" "koito.png") }}
         </div>
 
         <!-- Intro Text Area -->

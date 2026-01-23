@@ -22,7 +22,7 @@
   .retro-content h3 { @apply text-2xl; }
   .retro-content p { @apply mb-6; }
   .retro-content a { @apply text-retro-accent no-underline hover:underline; }
-  .retro-content ul { @apply list-disc list-inside mb-6 space-y-2; }
+  .retro-content ul { @apply list-disc list-outside mb-6 ml-8 space-y-2; }
   .retro-content li::marker { @apply text-retro-accent; }
   .retro-content strong { @apply text-white font-bold; }
   .retro-content code { @apply text-retro-accent bg-gray-800 px-2 py-0.5 text-lg font-mono; }
