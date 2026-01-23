@@ -13,7 +13,7 @@ A personal portfolio and homepage built with [Hugo](https://gohugo.io/) and [Tai
 
 ### Prerequisites
 
-- [Hugo](https://gohugo.io/installation/) (extended version recommended)
+- [Hugo](https://gohugo.io/installation/)
 - [Node.js](https://nodejs.org/) and npm
 
 ### Setup
@@ -49,4 +49,4 @@ hugo
 - `layouts/`: Hugo templates.
 - `static/`: Static assets (images, etc.).
 
-Yeah, this is ai generated if it wasn't obvious lmao
+Yeah, this Readme is ai generated if it wasn't obvious lmao
