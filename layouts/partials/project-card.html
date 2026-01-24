@@ -10,13 +10,13 @@
     <div class="relative h-full p-6 flex flex-col justify-center items-center text-center">
         
         <!-- Project Name -->
-        <h3 class="text-4xl font-bold uppercase tracking-widest transition-all duration-500 ease-in-out
+        <h3 class="text-2xl sm:text-4xl font-bold uppercase tracking-widest transition-all duration-500 ease-in-out
                    group-hover:text-xl group-hover:absolute group-hover:top-4 group-hover:text-retro-accent">
             {{ .name }}
         </h3>
 
         <!-- Description -->
-        <div class="opacity-0 translate-y-4 transition-all duration-500 ease-in-out 
+        <div class="opacity-100 sm:translate-y-0 sm:opacity-0 sm:translate-y-4 transition-all duration-500 ease-in-out 
                     group-hover:opacity-100 group-hover:translate-y-0 mt-4">
             <p class="text-gray-300 text-xl leading-tight">
                 {{ .description }}
