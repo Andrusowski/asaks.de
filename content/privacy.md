@@ -1,11 +1,9 @@
 ---
-title: "Privacy"
-date: 2026-01-24T12:00:00Z
+title: "Privacy Policy"
+date: 2025-01-23T12:00:00Z
 draft: false
 layout: "single"
 ---
-
-# Privacy Policy
 
 Personal data (usually referred to just as „data“ below) will only be processed by us to the extent necessary and for the purpose of providing a functional and user-friendly website, including its contents, and the services offered there.
 
