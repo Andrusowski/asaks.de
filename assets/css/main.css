@@ -56,12 +56,12 @@
   }
 
   .retro-content table {
-    @apply w-full text-left border-collapse mb-6 mt-4;
+    @apply block max-w-full overflow-x-auto whitespace-nowrap md:table md:whitespace-normal w-full text-left border-collapse mb-6 mt-4;
   }
 
   .retro-content th,
   .retro-content td {
-    @apply px-6 py-4 border-b border-gray-700;
+    @apply px-4 py-3 md:px-6 md:py-4 border-b border-gray-700;
   }
 
   .retro-content th {
