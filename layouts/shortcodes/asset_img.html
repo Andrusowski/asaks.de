@@ -1,0 +1,6 @@
+{{ $img := resources.Get (.Get 0) }}
+{{ if $img }}
+<img src="{{ $img.Permalink }}" alt="{{ .Get 1 | default "Button Image" }}" width="{{ $img.Width }}" height="{{ $img.Height }}" class="cursor-pointer hover:opacity-80 transition-opacity" title="Click to copy HTML snippet" onclick="navigator.clipboard.writeText('<a href=\'#\'><img src=\'' + this.src + '\' alt=\'' + this.alt + '\' width=\'' + this.width + '\' height=\'' + this.height + '\'></a>'); alert('HTML template copied to clipboard!');" />
+{{ else }}
+<span>Image not found: {{ .Get 0 }}</span>
+{{ end }}

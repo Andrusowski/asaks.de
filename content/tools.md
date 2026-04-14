@@ -42,3 +42,6 @@ I got into arcade rhythm games a couple of years ago. Since the next arcade is 3
 
 Bonus:
 - Card reader: [AIC Touch](https://github.com/whowechina/aic_pico)
+
+---
+[Check out my collection of 88x31 rhythm game buttons!](/buttons)
